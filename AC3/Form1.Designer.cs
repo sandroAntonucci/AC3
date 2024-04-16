@@ -35,22 +35,34 @@
             lblActEco = new Label();
             lblCons = new Label();
             lblTotal = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            cmbYear = new ComboBox();
+            cmbComarca = new ComboBox();
+            txtPob = new TextBox();
+            txtConsDomPerCap = new TextBox();
+            txtTotal = new TextBox();
+            txtDomXarx = new TextBox();
+            txtActEcon = new TextBox();
             lblPobGreater = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            lblConsCapLow = new Label();
+            lblConsCapMax = new Label();
+            lblConsMitj = new Label();
+            lblPoblationGreater = new Label();
             btnClear = new Button();
             btnSave = new Button();
             dataGridView1 = new DataGridView();
+            Any = new DataGridViewTextBoxColumn();
+            CodiComarca = new DataGridViewTextBoxColumn();
+            Comarca = new DataGridViewTextBoxColumn();
+            Poblacio = new DataGridViewTextBoxColumn();
+            DomXar = new DataGridViewTextBoxColumn();
+            ActEcon = new DataGridViewTextBoxColumn();
+            Total = new DataGridViewTextBoxColumn();
+            ConsDomPerCap = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -128,57 +140,57 @@
             lblTotal.TabIndex = 7;
             lblTotal.Text = "Total";
             // 
-            // comboBox1
+            // cmbYear
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(20, 91);
-            comboBox1.MaximumSize = new Size(80, 0);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(80, 33);
-            comboBox1.TabIndex = 8;
+            cmbYear.FormattingEnabled = true;
+            cmbYear.Location = new Point(20, 91);
+            cmbYear.MaximumSize = new Size(80, 0);
+            cmbYear.Name = "cmbYear";
+            cmbYear.Size = new Size(80, 33);
+            cmbYear.TabIndex = 8;
             // 
-            // comboBox2
+            // cmbComarca
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(160, 91);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(145, 33);
-            comboBox2.TabIndex = 9;
+            cmbComarca.FormattingEnabled = true;
+            cmbComarca.Location = new Point(160, 91);
+            cmbComarca.Name = "cmbComarca";
+            cmbComarca.Size = new Size(145, 33);
+            cmbComarca.TabIndex = 9;
             // 
-            // textBox1
+            // txtPob
             // 
-            textBox1.Location = new Point(352, 91);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(124, 32);
-            textBox1.TabIndex = 10;
+            txtPob.Location = new Point(352, 91);
+            txtPob.Name = "txtPob";
+            txtPob.Size = new Size(124, 32);
+            txtPob.TabIndex = 10;
             // 
-            // textBox2
+            // txtConsDomPerCap
             // 
-            textBox2.Location = new Point(352, 217);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(124, 32);
-            textBox2.TabIndex = 11;
+            txtConsDomPerCap.Location = new Point(352, 217);
+            txtConsDomPerCap.Name = "txtConsDomPerCap";
+            txtConsDomPerCap.Size = new Size(124, 32);
+            txtConsDomPerCap.TabIndex = 11;
             // 
-            // textBox3
+            // txtTotal
             // 
-            textBox3.Location = new Point(512, 217);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(124, 32);
-            textBox3.TabIndex = 12;
+            txtTotal.Location = new Point(512, 217);
+            txtTotal.Name = "txtTotal";
+            txtTotal.Size = new Size(124, 32);
+            txtTotal.TabIndex = 12;
             // 
-            // textBox4
+            // txtDomXarx
             // 
-            textBox4.Location = new Point(20, 217);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(124, 32);
-            textBox4.TabIndex = 13;
+            txtDomXarx.Location = new Point(20, 217);
+            txtDomXarx.Name = "txtDomXarx";
+            txtDomXarx.Size = new Size(124, 32);
+            txtDomXarx.TabIndex = 13;
             // 
-            // textBox5
+            // txtActEcon
             // 
-            textBox5.Location = new Point(160, 217);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(145, 32);
-            textBox5.TabIndex = 14;
+            txtActEcon.Location = new Point(160, 217);
+            txtActEcon.Name = "txtActEcon";
+            txtActEcon.Size = new Size(145, 32);
+            txtActEcon.TabIndex = 14;
             // 
             // lblPobGreater
             // 
@@ -232,14 +244,14 @@
             groupBox1.Controls.Add(lblDomXarx);
             groupBox1.Controls.Add(lblActEco);
             groupBox1.Controls.Add(lblCons);
-            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(txtActEcon);
             groupBox1.Controls.Add(lblTotal);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtDomXarx);
+            groupBox1.Controls.Add(cmbYear);
+            groupBox1.Controls.Add(txtTotal);
+            groupBox1.Controls.Add(cmbComarca);
+            groupBox1.Controls.Add(txtConsDomPerCap);
+            groupBox1.Controls.Add(txtPob);
             groupBox1.Font = new Font("Segoe UI", 14F);
             groupBox1.Location = new Point(12, 28);
             groupBox1.Name = "groupBox1";
@@ -250,6 +262,10 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(lblConsCapLow);
+            groupBox2.Controls.Add(lblConsCapMax);
+            groupBox2.Controls.Add(lblConsMitj);
+            groupBox2.Controls.Add(lblPoblationGreater);
             groupBox2.Controls.Add(lblPobGreater);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label4);
@@ -262,6 +278,38 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Estadístiques";
             // 
+            // lblConsCapLow
+            // 
+            lblConsCapLow.AutoSize = true;
+            lblConsCapLow.Location = new Point(266, 178);
+            lblConsCapLow.Name = "lblConsCapLow";
+            lblConsCapLow.Size = new Size(0, 25);
+            lblConsCapLow.TabIndex = 23;
+            // 
+            // lblConsCapMax
+            // 
+            lblConsCapMax.AutoSize = true;
+            lblConsCapMax.Location = new Point(260, 134);
+            lblConsCapMax.Name = "lblConsCapMax";
+            lblConsCapMax.Size = new Size(0, 25);
+            lblConsCapMax.TabIndex = 22;
+            // 
+            // lblConsMitj
+            // 
+            lblConsMitj.AutoSize = true;
+            lblConsMitj.Location = new Point(180, 91);
+            lblConsMitj.Name = "lblConsMitj";
+            lblConsMitj.Size = new Size(0, 25);
+            lblConsMitj.TabIndex = 21;
+            // 
+            // lblPoblationGreater
+            // 
+            lblPoblationGreater.AutoSize = true;
+            lblPoblationGreater.Location = new Point(180, 41);
+            lblPoblationGreater.Name = "lblPoblationGreater";
+            lblPoblationGreater.Size = new Size(0, 25);
+            lblPoblationGreater.TabIndex = 20;
+            // 
             // btnClear
             // 
             btnClear.Location = new Point(681, 268);
@@ -270,6 +318,7 @@
             btnClear.TabIndex = 22;
             btnClear.Text = "Netejar";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnSave
             // 
@@ -283,11 +332,57 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Any, CodiComarca, Comarca, Poblacio, DomXar, ActEcon, Total, ConsDomPerCap });
             dataGridView1.Location = new Point(12, 347);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 60;
             dataGridView1.Size = new Size(1004, 127);
             dataGridView1.TabIndex = 24;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
+            // 
+            // Any
+            // 
+            Any.HeaderText = "Any";
+            Any.Name = "Any";
+            Any.Width = 90;
+            // 
+            // CodiComarca
+            // 
+            CodiComarca.HeaderText = "Codi Comarca";
+            CodiComarca.Name = "CodiComarca";
+            // 
+            // Comarca
+            // 
+            Comarca.HeaderText = "Comarca";
+            Comarca.Name = "Comarca";
+            Comarca.Width = 150;
+            // 
+            // Poblacio
+            // 
+            Poblacio.HeaderText = "Població";
+            Poblacio.Name = "Poblacio";
+            Poblacio.Width = 150;
+            // 
+            // DomXar
+            // 
+            DomXar.HeaderText = "Domèstic Xarxa";
+            DomXar.Name = "DomXar";
+            // 
+            // ActEcon
+            // 
+            ActEcon.HeaderText = "Activitats econòmiques";
+            ActEcon.Name = "ActEcon";
+            // 
+            // Total
+            // 
+            Total.HeaderText = "Total";
+            Total.Name = "Total";
+            Total.Width = 150;
+            // 
+            // ConsDomPerCap
+            // 
+            ConsDomPerCap.HeaderText = "Consum domèstic per càpita";
+            ConsDomPerCap.Name = "ConsDomPerCap";
             // 
             // Form1
             // 
@@ -299,6 +394,8 @@
             Controls.Add(btnClear);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            MaximumSize = new Size(1050, 515);
+            MinimumSize = new Size(1050, 515);
             Name = "Form1";
             Text = "Gestió de dades demogràfiques de regions";
             Load += Form1_Load;
@@ -318,13 +415,13 @@
         private Label lblActEco;
         private Label lblCons;
         private Label lblTotal;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private ComboBox cmbYear;
+        private ComboBox cmbComarca;
+        private TextBox txtPob;
+        private TextBox txtConsDomPerCap;
+        private TextBox txtTotal;
+        private TextBox txtDomXarx;
+        private TextBox txtActEcon;
         private Label lblPobGreater;
         private Label label2;
         private Label label3;
@@ -334,5 +431,17 @@
         private Button btnClear;
         private Button btnSave;
         private DataGridView dataGridView1;
+        private Label lblConsCapLow;
+        private Label lblConsCapMax;
+        private Label lblConsMitj;
+        private Label lblPoblationGreater;
+        private DataGridViewTextBoxColumn Any;
+        private DataGridViewTextBoxColumn CodiComarca;
+        private DataGridViewTextBoxColumn Comarca;
+        private DataGridViewTextBoxColumn Poblacio;
+        private DataGridViewTextBoxColumn DomXar;
+        private DataGridViewTextBoxColumn ActEcon;
+        private DataGridViewTextBoxColumn Total;
+        private DataGridViewTextBoxColumn ConsDomPerCap;
     }
 }
