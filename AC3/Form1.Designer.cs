@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblYear = new Label();
             lblRegion = new Label();
             lblPoblation = new Label();
@@ -63,85 +64,89 @@
             ActEcon = new DataGridViewTextBoxColumn();
             Total = new DataGridViewTextBoxColumn();
             ConsDomPerCap = new DataGridViewTextBoxColumn();
+            errorProvider1 = new ErrorProvider(components);
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // lblYear
             // 
             lblYear.AutoSize = true;
-            lblYear.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblYear.Location = new Point(20, 58);
+            lblYear.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblYear.Location = new Point(20, 62);
             lblYear.Name = "lblYear";
-            lblYear.Size = new Size(33, 17);
+            lblYear.Size = new Size(28, 15);
             lblYear.TabIndex = 1;
             lblYear.Text = "Any";
             // 
             // lblRegion
             // 
             lblRegion.AutoSize = true;
-            lblRegion.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRegion.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
             lblRegion.Location = new Point(160, 58);
             lblRegion.Name = "lblRegion";
-            lblRegion.Size = new Size(63, 17);
+            lblRegion.Size = new Size(58, 15);
             lblRegion.TabIndex = 2;
             lblRegion.Text = "Comarca";
             // 
             // lblPoblation
             // 
             lblPoblation.AutoSize = true;
-            lblPoblation.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPoblation.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
             lblPoblation.Location = new Point(352, 58);
             lblPoblation.Name = "lblPoblation";
-            lblPoblation.Size = new Size(63, 17);
+            lblPoblation.Size = new Size(55, 15);
             lblPoblation.TabIndex = 3;
             lblPoblation.Text = "Població";
+            lblPoblation.Click += lblPoblation_Click;
             // 
             // lblDomXarx
             // 
             lblDomXarx.AutoSize = true;
-            lblDomXarx.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDomXarx.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
             lblDomXarx.Location = new Point(20, 176);
             lblDomXarx.Name = "lblDomXarx";
-            lblDomXarx.Size = new Size(107, 17);
+            lblDomXarx.Size = new Size(96, 15);
             lblDomXarx.TabIndex = 4;
             lblDomXarx.Text = "Domèstic xarxa";
             // 
             // lblActEco
             // 
             lblActEco.AutoSize = true;
-            lblActEco.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblActEco.Location = new Point(160, 176);
+            lblActEco.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
+            lblActEco.Location = new Point(160, 163);
             lblActEco.MaximumSize = new Size(160, 0);
             lblActEco.Name = "lblActEco";
-            lblActEco.Size = new Size(159, 34);
+            lblActEco.Size = new Size(152, 30);
             lblActEco.TabIndex = 5;
             lblActEco.Text = "Activitats econòmiques i fonts pròpies";
             // 
             // lblCons
             // 
             lblCons.AutoSize = true;
-            lblCons.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCons.Location = new Point(352, 176);
+            lblCons.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
+            lblCons.Location = new Point(352, 163);
             lblCons.MaximumSize = new Size(130, 0);
             lblCons.Name = "lblCons";
-            lblCons.Size = new Size(124, 34);
+            lblCons.Size = new Size(114, 30);
             lblCons.TabIndex = 6;
             lblCons.Text = "Consum domèstic per càpita";
             // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
             lblTotal.Location = new Point(512, 176);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(42, 17);
+            lblTotal.Size = new Size(36, 15);
             lblTotal.TabIndex = 7;
             lblTotal.Text = "Total";
             // 
             // cmbYear
             // 
+            cmbYear.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbYear.FormattingEnabled = true;
             cmbYear.Location = new Point(20, 91);
             cmbYear.MaximumSize = new Size(80, 0);
@@ -151,6 +156,7 @@
             // 
             // cmbComarca
             // 
+            cmbComarca.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbComarca.FormattingEnabled = true;
             cmbComarca.Location = new Point(160, 91);
             cmbComarca.Name = "cmbComarca";
@@ -195,10 +201,10 @@
             // lblPobGreater
             // 
             lblPobGreater.AutoSize = true;
-            lblPobGreater.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPobGreater.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
             lblPobGreater.Location = new Point(16, 49);
             lblPobGreater.Name = "lblPobGreater";
-            lblPobGreater.Size = new Size(148, 17);
+            lblPobGreater.Size = new Size(139, 15);
             lblPobGreater.TabIndex = 16;
             lblPobGreater.Text = "Població > 20000 hab.:";
             lblPobGreater.TextAlign = ContentAlignment.BottomLeft;
@@ -206,10 +212,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
             label2.Location = new Point(16, 97);
             label2.Name = "label2";
-            label2.Size = new Size(159, 17);
+            label2.Size = new Size(146, 15);
             label2.TabIndex = 17;
             label2.Text = "Consum domèstic mitjà:";
             label2.TextAlign = ContentAlignment.BottomLeft;
@@ -217,10 +223,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
             label3.Location = new Point(16, 142);
             label3.Name = "label3";
-            label3.Size = new Size(238, 17);
+            label3.Size = new Size(224, 15);
             label3.TabIndex = 18;
             label3.Text = "Consum domèstic per càpita més alt:";
             label3.TextAlign = ContentAlignment.BottomLeft;
@@ -228,10 +234,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Bell MT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Malgun Gothic", 9F, FontStyle.Bold);
             label4.Location = new Point(16, 186);
             label4.Name = "label4";
-            label4.Size = new Size(253, 17);
+            label4.Size = new Size(237, 15);
             label4.TabIndex = 19;
             label4.Text = "Consum doméstic per càpita més baix: ";
             label4.TextAlign = ContentAlignment.BottomLeft;
@@ -328,6 +334,7 @@
             btnSave.TabIndex = 23;
             btnSave.Text = "Guardar";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // dataGridView1
             // 
@@ -384,6 +391,10 @@
             ConsDomPerCap.HeaderText = "Consum domèstic per càpita";
             ConsDomPerCap.Name = "ConsDomPerCap";
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -404,6 +415,7 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
@@ -443,5 +455,6 @@
         private DataGridViewTextBoxColumn ActEcon;
         private DataGridViewTextBoxColumn Total;
         private DataGridViewTextBoxColumn ConsDomPerCap;
+        private ErrorProvider errorProvider1;
     }
 }

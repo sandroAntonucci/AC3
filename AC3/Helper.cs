@@ -44,7 +44,22 @@ namespace AC3
             return consumAigua.Min(c => c.ConsDomPerCapita);
         }
 
+        // Retorna el codi de comarca depenent del nom
+        public static int GetCodiComarca(List<ConsumAigua> consumAigua, string comarca)
+        {
+            return consumAigua.Where(c => c.Comarca == comarca).Select(c => c.CodiComarca).FirstOrDefault();
+        }
 
-
+        // Afegeix el consum al csv
+        public static void AddToCsv(string path, ConsumAigua consum)
+        {
+            using (var writer = new StreamWriter(path, append: true))
+            {
+                using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                {
+                    csv.WriteRecord(consum);
+                }
+            }
+        }
     }
 }
