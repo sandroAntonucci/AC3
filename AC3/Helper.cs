@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace AC3
 {
-    public class Helper
+    public static class Helper
     {
         // Crea una llista d'objectes consumAigua des de l'arxiu CSV
         public static List<ConsumAigua> GetCSV(string path)
